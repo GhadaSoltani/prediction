@@ -1,0 +1,61 @@
+# ---------------------------------------------------------------------------
+# Confidential data — never commit
+# ---------------------------------------------------------------------------
+# Blanket rule: no spreadsheets or CSVs by default.
+*.csv
+*.CSV
+*.xlsx
+*.XLSX
+*.xls
+*.XLS
+*.xlsm
+*.parquet
+
+# Explicitly listed for clarity (already covered above):
+#   purchases_1.xlsx, purchases_2.XLSX   -> internal customer purchase records
+#   maps.csv, maps_labeled*.csv          -> scraped business contacts (phone/email/address)
+#   ranked_prospects*.csv                -> scored prospect lists + contact details
+#   top_by_governorate*.csv              -> same, segmented
+#   top_by_search_category*.csv          -> same, segmented
+#   match_review*.csv                    -> customer names matched to map entities
+#   features*.csv                        -> per-business features incl. geo coordinates
+
+# Aggregate metrics only (no names, no contacts) — safe to track.
+!method_comparison.csv
+!method_comparison_v2.csv
+!method_comparison_v3.csv
+!prior_comparison.csv
+!stability_results.csv
+!stability_v2.csv
+!stability_v3.csv
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# ---------------------------------------------------------------------------
+# Environment / secrets
+# ---------------------------------------------------------------------------
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+service_account*.json
+
+# ---------------------------------------------------------------------------
+# OS / editor
+# ---------------------------------------------------------------------------
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/

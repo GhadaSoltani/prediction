@@ -1,0 +1,5 @@
+estimator,pi_hat,c_hat,threshold
+spy,0.7709,0.0199,0.0005
+holdout,0.3498,0.0497,0.001
+tice,0.99,0.0056,0.347
+final (robust),0.3498,0.0276,0.174
