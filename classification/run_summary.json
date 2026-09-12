@@ -1,0 +1,71 @@
+{
+  "split_sizes": {
+    "train": 16712,
+    "val": 5571,
+    "test": 5571
+  },
+  "best_model": "LightGBM",
+  "selection_criterion": "validation PR-AUC (average precision)",
+  "val_pr_auc": {
+    "LogisticRegression": 0.49257100648550295,
+    "RandomForest": 0.5256884257930106,
+    "LightGBM": 0.5845387155863669
+  },
+  "test_metrics": {
+    "LogisticRegression": {
+      "accuracy": 0.7447495961227787,
+      "precision": 0.252715837621498,
+      "recall": 0.7935368043087971,
+      "f1": 0.383347788378144,
+      "balanced_accuracy": 0.7664333403275139,
+      "roc_auc": 0.8444285981299041,
+      "pr_auc": 0.42133927481864725,
+      "brier": 0.16176271495823002,
+      "log_loss": 0.48107791166462793
+    },
+    "RandomForest": {
+      "accuracy": 0.7984203913121523,
+      "precision": 0.2946298984034833,
+      "recall": 0.7289048473967684,
+      "f1": 0.4196382428940568,
+      "balanced_accuracy": 0.7675238237781608,
+      "roc_auc": 0.8545653856813131,
+      "pr_auc": 0.46090667756577725,
+      "brier": 0.13917863830797672,
+      "log_loss": 0.4310670663362684
+    },
+    "LightGBM": {
+      "accuracy": 0.8704002872015796,
+      "precision": 0.3997569866342649,
+      "recall": 0.5906642728904847,
+      "f1": 0.47681159420289854,
+      "balanced_accuracy": 0.7460700702306433,
+      "roc_auc": 0.8680271541300159,
+      "pr_auc": 0.5123974890002202,
+      "brier": 0.09069536437688655,
+      "log_loss": 0.2945853848264534
+    }
+  },
+  "brier_before": 0.09069536437688655,
+  "brier_after": 0.06649772853014439,
+  "known_customer_check": [
+    {
+      "model": "LogisticRegression",
+      "n_known": 130,
+      "known_recall": 0.6384615384615384,
+      "known_mean_proba": 0.5570407653293858
+    },
+    {
+      "model": "RandomForest",
+      "n_known": 130,
+      "known_recall": 0.5692307692307692,
+      "known_mean_proba": 0.535858860193386
+    },
+    {
+      "model": "LightGBM",
+      "n_known": 130,
+      "known_recall": 0.4153846153846154,
+      "known_mean_proba": 0.4195183737009131
+    }
+  ]
+}
